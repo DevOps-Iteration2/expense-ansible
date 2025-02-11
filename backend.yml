@@ -48,6 +48,13 @@
         name: mysql
         state: latest
 
+    - name: Install Python MySQL and Cryptography
+      ansible.builtin.pip:
+        name:
+          - PyMySQL
+          - cryptography
+        executable: pip3.9
+
     - name: Load Schema
       community.mysql.mysql_db:
         state: import
