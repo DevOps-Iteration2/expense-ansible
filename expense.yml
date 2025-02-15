@@ -1,4 +1,4 @@
-- name : Setting up Frontend
+- name : Expense Project Setup
   hosts: all
   become: true
   roles:
