@@ -23,6 +23,7 @@
     login_host: FQDN # Give hostname
     filter: version
   register: mysql_connection_output
+  ignore_errors: yes # even if this failed I want to execute next task so using ignore errors[Error Handling]
 
 - name: Printing the mysql connection output
   ansible.builtin.debug:
