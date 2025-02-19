@@ -20,7 +20,7 @@
   community.mysql.mysql_info:
     login_user: root
     login_password: ExpenseApp@1
-    login_host: FQDN # Give hostname
+    login_host: mysql.devopsjourney.fun # Give hostname
     filter: version
   register: mysql_connection_output
   ignore_errors: yes # even if this failed I want to execute next task so using ignore errors[Error Handling]

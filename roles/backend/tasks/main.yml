@@ -47,7 +47,7 @@
     target: /app/schema/backend.sql
     login_user: root
     login_password: ExpenseApp@1
-    login_host: IP_Address
+    login_host: mysql-dev.devopsjourney.fun
 
 - name: Start Backend Service
   ansible.builtin.systemd_service:
