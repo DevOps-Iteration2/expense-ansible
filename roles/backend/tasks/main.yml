@@ -28,12 +28,7 @@
     path: /app
     state: latest
 
-- name: Install MySQL Client
-  ansible.builtin.dnf:
-    name: mysql
-    state: latest
-
-- name: Install PyMySQL and Cryptography
+- name: Install Python PyMySQL and Cryptography
   ansible.builtin.pip:
     name:
       - PyMySQL
