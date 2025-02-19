@@ -33,7 +33,7 @@
     name: mysql
     state: latest
 
-- name: Install Python MySQL and Cryptography
+- name: Install PyMySQL and Cryptography
   ansible.builtin.pip:
     name:
       - PyMySQL
