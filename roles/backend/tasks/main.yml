@@ -2,7 +2,7 @@
   ansible.builtin.shell: dnf module disable nodejs -y
 
 - name: Enable NodeJS module
-  ansible.builtin.shell: dnf module enable nodejs -y
+  ansible.builtin.shell: dnf module disable nodejs -y
 
 - name: Install NodeJS
   ansible.builtin.dnf:
