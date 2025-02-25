@@ -9,4 +9,6 @@
         baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
     - name: Terraform Installation
-      ansible.builtin.shell: dnf install terraform
+      ansible.builtin.yum:
+        name: terraform
+        state: present
