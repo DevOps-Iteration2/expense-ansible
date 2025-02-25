@@ -1,6 +1,7 @@
 - name: Install Terraform
   hosts: all
   become: true
+  tasks:
   ansible.builtin.dnf:
     name: terraform
     state: latest
