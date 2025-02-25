@@ -1,0 +1,25 @@
+format_version: 10
+pipelines:
+  workstation:
+    group: defaultGroup
+    materials:
+      git-b844969:
+        git: https://github.com/DevOps-iteration2/expense-ansible.git
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages: # Need to check for indentation
+      - DEV:
+          fetch_materials: true
+          environment_variables:
+            env : dev
+          approval:
+            type: manual
+          jobs:
+            ansible-playbook:
+              tasks:
+                - exec:
+                    arguments:
+                      - terraform.sh
+                    command: bash #bash ansible.sh
+                    run_if: passed
