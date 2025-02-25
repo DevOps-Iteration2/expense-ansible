@@ -6,7 +6,7 @@
       ansible.builtin.yum_repository:
         name: hashicorp
         description: HashiCorp YUM Repository
-        baseurl: https://rpm.releases.hashicorp.com/RHEL/$releasever/$basearch/stable
+        baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
     - name: Terraform Installation
       ansible.builtin.dnf:
