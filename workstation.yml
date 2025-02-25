@@ -4,6 +4,7 @@
   tasks:
     - name: Install Terraform
       ansible.builtin.yum_repository:
+        name: hashicorp
         baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
     - name: Terraform Version
