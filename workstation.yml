@@ -3,6 +3,6 @@
   become: true
   tasks:
     - name: Install Terraform
-      ansible.builtin.dnf:
+      yum:
         name: terraform
         state: latest
