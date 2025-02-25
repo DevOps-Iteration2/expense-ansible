@@ -6,3 +6,6 @@
       yum:
         name: terraform
         state: latest
+
+    - name: Terraform Version
+      ansible.builtin.shell: terraform -version
