@@ -8,7 +8,5 @@
         description: HashiCorp YUM Repository
         baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
-    - name: Terraform Version
-      ansible.builtin.dnf:
-        name: terraform
-        state: present
+    - name: Terraform Installation
+      ansible.builtin.shell: dnf install terraform
