@@ -1,1 +1,1 @@
-ansible-playbook -i 98.84.142.88, -e ansible_user=ec2-user -e ansible_password=DevOps321 workstation.yml
+ansible-playbook -i 54.146.253.148, -e ansible_user=ec2-user -e ansible_password=DevOps321 workstation.yml
