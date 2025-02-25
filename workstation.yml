@@ -2,13 +2,14 @@
   hosts: all
   become: true
   tasks:
-    - name: Install Terraform
+    - name: Add HashiCorp YUM Repository
       ansible.builtin.yum_repository:
         name: hashicorp
         description: HashiCorp YUM Repository
         baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
-    - name: Terraform Version
-      ansible.builtin.dnf:
-        name: terraform
-        state: present
+
+#    - name: Terraform Version
+#      ansible.builtin.dnf:
+#        name: terraform
+#        state: present
