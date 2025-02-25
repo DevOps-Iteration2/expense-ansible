@@ -3,9 +3,10 @@
   become: true
   tasks:
     - name: Install Terraform
-      yum:
-        name: terraform
-        state: latest
+      ansible.builtin.yum_repository:
+        baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 
     - name: Terraform Version
-      ansible.builtin.shell: terraform -version
+      ansible.builtin.dnf:
+        name: terraform
+        state: present
