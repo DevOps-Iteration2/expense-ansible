@@ -1,0 +1,11 @@
+[Unit]
+Description = Node_exporter server service
+
+[Service]
+User=bin
+# WorkingDirectory=/opt/prometheus-{{ version }}.linux-amd64 No config file to load
+ExecStart=/opt/node_exporter-{{ version }}.linux-amd64/node_exporter
+SyslogIdentifier=node_exporter
+
+[Install]
+WantedBy=multi-user.target
