@@ -8,6 +8,8 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: main
+    secure_variables:
+      vault_token: AES:M5sHrn101ghkZuiQ0rUtfQ==:Pv9yJ08KyNWzUcOYPiVJWXAqnoz2aEYE6ksDOGvhgekEYXSZtbBbIvD/L+VxUbNx
     stages: # Need to check for indentation
       - DEV:
           fetch_materials: true
