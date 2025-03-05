@@ -1,2 +1,4 @@
 component=$1 # see in pipelines
-ansible-playbook -i $component-dev.devopsjourney.fun, -e ansible_user=ec2-user -e ansible_password=DevOps321 -e env=dev -e role_name=$component expense.yml
+
+ansible-playbook get-secrets.yml -e vault_token=$vault_token  -e env=$env -e role_name=$component
+ansible-playbook -i $component-$env.devopsjourney.fun, -e vault_token=$vault_token -e env=$env -e role_name=$component expense.yml -e '@secrets.json' -e '@app.json'

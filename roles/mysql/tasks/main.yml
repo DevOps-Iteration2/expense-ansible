@@ -19,8 +19,8 @@
 - name: Check the DB connection with our password
   community.mysql.mysql_info:
     login_user: root
-    login_password: ExpenseApp@1
-    login_host: mysql-dev.devopsjourney.fun # Give hostname
+    login_password: "{{mysql_root_password}}"
+    login_host: mysql-{{env}}.devopsjourney.fun # Give hostname
     filter: version
   register: mysql_connection_output
   ignore_errors: yes # even if this failed I want to execute next task so using ignore errors[Error Handling]
@@ -30,5 +30,5 @@
     msg: "{{ mysql_connection_output }}" # Demo purpose
 
 - name: Setup root password
-  ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
+  ansible.builtin.shell: mysql_secure_installation --set-root-pass {{mysql_root_password}}
   when: mysql_connection_output.failed is true

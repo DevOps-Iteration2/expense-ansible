@@ -46,8 +46,8 @@
     name: all
     target: /app/schema/backend.sql
     login_user: root
-    login_password: ExpenseApp@1
-    login_host: mysql-dev.devopsjourney.fun
+    login_password: "{{mysql_root_password}}"
+    login_host: mysql-{{env}}.devopsjourney.fun
 
 - name: Import roles and tasks from NewRelic
   ansible.builtin.import_role:
