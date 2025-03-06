@@ -6,7 +6,7 @@
 - name: Install logstash
   ansible.builtin.dnf:
     name: logstash
-    state: started
+    state: latest
 
 - name: Copy logstash config file
   ansible.builtin.template:
