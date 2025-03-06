@@ -9,6 +9,7 @@
 - name: Import Logstash
   ansible.builtin.import_role:
     name: logstash
+  when: logstash_config_needed
 
 - name: Import rsyslog
   ansible.builtin.import_role:
