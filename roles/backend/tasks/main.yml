@@ -23,10 +23,10 @@
     name: common
     tasks_from: app-pre-req
 
-- name: Install NodeJS dependencies
-  community.general.npm:
-    path: /app
-    state: latest
+#- name: Install NodeJS dependencies -- As we are installing from CI end. npm dependencies
+#  community.general.npm:
+#    path: /app
+#    state: latest
 
 - name: Install Python PyMySQL and Cryptography
   ansible.builtin.pip:
