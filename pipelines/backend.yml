@@ -1,7 +1,8 @@
 format_version: 10
 pipelines:
-  backend:
+  expense-backend:
     group: defaultGroup
+    label_template: "${env:APP_VERSION}"
     materials:
       git-b844969:
         git: https://github.com/DevOps-iteration2/expense-ansible.git
@@ -10,6 +11,8 @@ pipelines:
         branch: main
     secure_variables:
       vault_token: AES:M5sHrn101ghkZuiQ0rUtfQ==:Pv9yJ08KyNWzUcOYPiVJWXAqnoz2aEYE6ksDOGvhgekEYXSZtbBbIvD/L+VxUbNx
+    environment_variables:
+      APP_VERSION: ""
     stages:
       - DEV:
           fetch_materials: true
